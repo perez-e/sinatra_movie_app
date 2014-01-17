@@ -20,3 +20,9 @@ post "/result" do
 
 	erb :result
 end
+
+
+get '/poster/:imdb' do |imdb_id|
+	response = Typhoeus.get("http://www.omdbapi.com/", params: {i: imdb_id}) 
+	@movie = JSON.parse(response.body)
+end
