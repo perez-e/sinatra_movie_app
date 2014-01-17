@@ -15,4 +15,8 @@ post "/result" do
 
 	response = Typhoeus.get("http://www.omdbapi.com/", params: {s: search_str})
 	result = JSON.parse(response.body)
+
+	@movies = result["Search"].sort_by {|movie| movie["Year"] }
+
+	erb :result
 end
