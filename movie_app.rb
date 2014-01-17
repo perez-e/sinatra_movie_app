@@ -18,6 +18,13 @@ post "/result" do
 
 	@movies = result["Search"].sort_by {|movie| movie["Year"] }
 
+	@movies.each do |movie|
+		response = Typhoeus.get("http://www.omdbapi.com/", params: {i: movie["imdbID"]})
+		result = JSON.parse(response.body)
+
+		movie["Poster"] = result["Poster"]
+	end
+
 	erb :result
 end
 
