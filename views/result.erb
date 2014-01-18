@@ -1,4 +1,4 @@
-<h1 class="heading">Movie Results for: <%= @search_str %></h1>
+<h1 class="heading ">Movie Results for: <%= @search_str %></h1>
 <div class="container">
 	<% @movies.each do |movie| %>
 	<div class="row">
@@ -7,8 +7,8 @@
 			</div>
 		</div>
 		<div class="col-xs-7">
-			<h3 class="movie-title"><a href='/poster/<%= movie["imdbID"]%>'><%= movie["Title"] %> (<%= movie["Year"] %>)</a> </h3>
-			<p><%= movie["Plot"] %></p>
+			<h3 class="movie-title"><a class="movie-title" href='/poster/<%= movie["imdbID"]%>'><%= movie["Title"] %> (<%= movie["Year"] %>)</a> </h3>
+			<p class="plot"><%= movie["Plot"] %></p>
 		</div>
 	</div>
 	<br />

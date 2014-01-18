@@ -1,4 +1,4 @@
-<h1 class="heading"><%= @movie["Title"] %> ( <%= @movie["Year"] %> )</h1>
+<h1 class="heading"><%= @movie["Title"] %> (<%= @movie["Year"] %>)</h1>
 	<div class="center" ><a href='http://www.imdb.com/title/<%= @movie["imdbID"] %>'>
 		<img src="<%= @movie['Poster']=='N/A' ? 'http://static2.wikia.nocookie.net/__cb20090329133961/superfriends/images/a/a5/No_Photo_Available.jpg' : @movie['Poster'] %>"/>
 	</a>
