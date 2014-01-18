@@ -1,1 +1,54 @@
-style.css
+.poster_div {
+	display: block;
+	position: absolute;
+	right: 25px;
+	width: 45px;
+	background-color: black;
+}
+
+.poster {
+	height: 100px;
+}
+
+
+.heading {
+	display: block;
+	margin: 50px auto;
+	text-align: center;
+}
+
+.new-search-button {
+	float: right;
+	margin: 0 150px 50px 0;
+}
+
+.contain-poster {
+	position: relative;
+	height: 100px;
+}
+
+.center {
+	margin: 0 auto;
+	display: block;
+	width: 300px;
+}
+
+.row {
+	border: solid 1px black;
+	padding: 5px;
+}
+
+.movie-title {
+	margin-top: 0;
+}
+
+.search-form {
+	text-align: center;
+	margin: 200px auto;
+}
+
+.background {
+	background-image: url(http://noirbabes.com/precode/wp-content/uploads/2012/08/peg1-stars-hollywood-sign.jpg);
+	background-size: 100%;
+	background-attachment: fixed;
+}
