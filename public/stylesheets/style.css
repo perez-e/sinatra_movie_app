@@ -20,9 +20,14 @@
 	font-family: 'Gravitas One', cursive;
 }
 
-.new-search-button {
+a.new-search-button {
 	float: right;
 	margin: 0 150px 50px 0;
+	background-color: #3276b1;
+}
+
+a.new-search-button:hover {
+	background-color: #b2e1e5;
 }
 
 .contain-poster {
