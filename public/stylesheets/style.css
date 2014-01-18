@@ -36,6 +36,7 @@
 .row {
 	border: solid 1px black;
 	padding: 5px;
+	background-color: rgba(0,0,0,0.25)
 }
 
 .movie-title {
@@ -51,4 +52,23 @@
 	background-image: url(http://noirbabes.com/precode/wp-content/uploads/2012/08/peg1-stars-hollywood-sign.jpg);
 	background-size: 100%;
 	background-attachment: fixed;
+}
+
+.gravitas {
+	font-family: 'Gravitas One', cursive;
+	color: white;
+	font-size: 50px;
+}
+.btn-color {
+	background-color: white;
+	color: black;
+}
+
+.btn-color:hover{
+	background-color: #2a727d;
+	color: white;
+}
+
+.results-title {
+	color: white;
 }
