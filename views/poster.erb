@@ -1,21 +1,31 @@
 <h1 class="heading"><%= @movie["Title"] %> (<%= @movie["Year"] %>)</h1>
-	<div class="center" ><a href='http://www.imdb.com/title/<%= @movie["imdbID"] %>'>
-		<img src="<%= @movie['Poster']=='N/A' ? 'http://static2.wikia.nocookie.net/__cb20090329133961/superfriends/images/a/a5/No_Photo_Available.jpg' : @movie['Poster'] %>"/>
-	</a>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-5 col-xs12">
+			<div class="center" ><a href='http://www.imdb.com/title/<%= @movie["imdbID"] %>'>
+					<img src="<%= @movie['Poster']=='N/A' ? 'http://static2.wikia.nocookie.net/__cb20090329133961/superfriends/images/a/a5/No_Photo_Available.jpg' : @movie['Poster'] %>"/>
+				</a>
+			</div>
+		</div>
+		<div class="col-sm-7 col-xs-12 movie-contents">
+			<h3>Director</h3>
+			<p><%= @movie["Director"] %></p>
+			<h3>Actors</h3>
+			<ul class="actors">
+				<% @movie["Actors"].split(", ").each do |actor| %>
+					<li><%= actor %></li>
+				<% end %>
+			</ul>
+			<h3>Plot</h3>
+			<p><%= @movie["Plot"] %></p>
+			<h3>Runtime</h3>
+			<p><%= @movie["Runtime"] %></p>
+			<h3>Rating</h3>
+			<p><%= @movie["imdbRating"] %></p>
+			<h3>Genre</h3>
+			<p><%= @movie["Genre"] %></p>
+		</div>
+	</div>
 </div>
-
 <br />
-<br />
-<h5>Plot:</h5>
-<p><%= @movie["Plot"] %></p>
-<h5>Runtime: <%= @movie["Runtime"] %></h5>
-<h5>Rating: <%= @movie["imdbRating"] %></h5>
-<h5>Genre: <%= @movie["Genre"] %></h5>
-<h5>Director: <%= @movie["Director"] %></h5>
-<h5>Actors</h5>
-<ul>
-	<% @movie["Actors"].split(", ").each do |actor| %>
-		<li><%= actor %></li>
-	<% end %>
-</ul>
 <a href="/" class="btn btn-primary new-search-button">New Search</a>

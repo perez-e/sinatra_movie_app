@@ -89,3 +89,14 @@ a.new-search-button:hover {
 .movie-title {
 	color: #ffffff;
 }
+
+.movie-contents {
+	color: #fefefd;
+}
+
+.actors > li {
+	display: inline-block;
+	margin: 0 5px;
+	position: relative;
+	left: -45px;
+}
