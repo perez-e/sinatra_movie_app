@@ -16,19 +16,23 @@ post "/result" do
 	response = Typhoeus.get("http://www.omdbapi.com/", params: {s: @search_str})
 	result = JSON.parse(response.body)
 
-	@movies = result["Search"].sort_by {|movie| movie["Year"] }.reverse
+	if result["Search"].nil?
+		erb :error
+	else
+		@movies = result["Search"].sort_by {|movie| movie["Year"] }.reverse
 
-	@movies.each do |movie|
-		response = Typhoeus.get("http://www.omdbapi.com/", params: {i: movie["imdbID"]})
-		result = JSON.parse(response.body)
+		@movies.each do |movie|
+			response = Typhoeus.get("http://www.omdbapi.com/", params: {i: movie["imdbID"]})
+			result = JSON.parse(response.body)
 
-		movie["Poster"] = result["Poster"]
-		movie["Plot"] = result["Plot"]
+			movie["Poster"] = result["Poster"]
+			movie["Plot"] = result["Plot"]
+		end
+
+		@movies.select! {|movie| movie["Type"]=='movie'}
+
+		erb :result
 	end
-
-	@movies.select! {|movie| movie["Type"]=='movie'}
-
-	erb :result
 end
 
 

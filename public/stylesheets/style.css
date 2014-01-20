@@ -109,3 +109,7 @@ h3.movie-info:hover {
 	color: #b2e1e5;
 	cursor: pointer;
 }
+
+h1.error {
+	margin-top: 200px;
+}
