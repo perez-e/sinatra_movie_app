@@ -100,3 +100,12 @@ a.new-search-button:hover {
 	position: relative;
 	left: -45px;
 }
+
+.hide {
+	height: 0;
+}
+
+h3.movie-info:hover {
+	color: #b2e1e5;
+	cursor: pointer;
+}

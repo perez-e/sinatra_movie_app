@@ -8,22 +8,22 @@
 			</div>
 		</div>
 		<div class="col-sm-7 col-xs-12 movie-contents">
-			<h3>Director</h3>
-			<p><%= @movie["Director"] %></p>
-			<h3>Actors</h3>
-			<ul class="actors">
+			<h3 class="director movie-info">Director</h3>
+			<p class="director hide"><%= @movie["Director"] %></p>
+			<h3 class="movie-info actors">Actors</h3>
+			<ul class="actors hide">
 				<% @movie["Actors"].split(", ").each do |actor| %>
-					<li><%= actor %></li>
+					<li class="actors"><%= actor %></li>
 				<% end %>
 			</ul>
-			<h3>Plot</h3>
-			<p><%= @movie["Plot"] %></p>
-			<h3>Runtime</h3>
-			<p><%= @movie["Runtime"] %></p>
-			<h3>Rating</h3>
-			<p><%= @movie["imdbRating"] %></p>
-			<h3>Genre</h3>
-			<p><%= @movie["Genre"] %></p>
+			<h3 class="movie-info plot">Plot</h3>
+			<p class="plot hide"><%= @movie["Plot"] %></p>
+			<h3 class="movie-info runtime">Runtime</h3>
+			<p class="hide runtime"><%= @movie["Runtime"] %></p>
+			<h3 class="movie-info rating">Rating</h3>
+			<p class="hide rating"><%= @movie["imdbRating"] %></p>
+			<h3 class="movie-info genre">Genre</h3>
+			<p class="hide genre"><%= @movie["Genre"] %></p>
 		</div>
 	</div>
 </div>
